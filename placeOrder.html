@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Order Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Customer Order Management System</h2>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Order Date</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody id="orderTableBody">
+                <!-- Order data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h4>Save Customer Order</h4>
+            <form id="saveOrderForm">
+                <div class="form-group">
+                    <label for="customerName">Customer Name:</label>
+                    <input type="text" class="form-control" id="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="product">Product:</label>
+                    <input type="text" class="form-control" id="product" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" class="form-control" id="quantity" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Order</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h4>Search Customer Order</h4>
+            <form id="searchOrderForm">
+                <div class="form-group">
+                    <label for="searchOrderId">Order ID:</label>
+                    <input type="text" class="form-control" id="searchOrderId" required>
+                </div>
+                <button type="submit" class="btn btn-success">Search Order</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h4>Update Customer Order</h4>
+            <form id="updateOrderForm">
+                <div class="form-group">
+                    <label for="updateOrderId">Order ID:</label>
+                    <input type="text" class="form-control" id="updateOrderId" required>
+                </div>
+                <div class="form-group">
+                    <label for="updateProduct">Product:</label>
+                    <input type="text" class="form-control" id="updateProduct" required>
+                </div>
+                <div class="form-group">
+                    <label for="updateQuantity">Quantity:</label>
+                    <input type="number" class="form-control" id="updateQuantity" required>
+                </div>
+                <button type="submit" class="btn btn-warning">Update Order</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h4>Delete Customer Order</h4>
+            <form id="deleteOrderForm">
+                <div class="form-group">
+                    <label for="deleteOrderId">Order ID:</label>
+                    <input type="text" class="form-control" id="deleteOrderId" required>
+                </div>
+                <button type="submit" class="btn btn-danger">Delete Order</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // JavaScript code for handling form submissions and displaying order table
+
+    // Example: Save Customer Order
+    $('#saveOrderForm').submit(function(event) {
+        event.preventDefault();
+        var customerName = $('#customerName').val();
+        var product = $('#product').val();
+        var quantity = $('#quantity').val();
+        // Here, you can make an AJAX call to save the order
+        // After successful saving, you can update the order table
+    });
+
+    // Example: Search Customer Order
+    $('#searchOrderForm').submit(function(event) {
+        event.preventDefault();
+        var orderId = $('#searchOrderId').val();
+        // Here, you can make an AJAX call to search for the order
+        // Display the order details or update the order table
+    });
+
+    // Example: Update Customer Order
+    $('#updateOrderForm').submit(function(event) {
+        event.preventDefault();
+        var orderId = $('#updateOrderId').val();
+        var product = $('#updateProduct').val();
+        var quantity = $('#updateQuantity').val();
+        // Here, you can make an AJAX call to update the order
+        // After successful update, you can update the order table
+    });
+
+    // Example: Delete Customer Order
+    $('#deleteOrderForm').submit(function(event) {
+        event.preventDefault();
+        var orderId = $('#deleteOrderId').val();
+        // Here, you can make an AJAX call to delete the order
+        // After successful deletion, you can update the order table
+    });
+
+    // Example: Get All Customer Orders
+    $(document).ready(function() {
+        // Here, you can make an AJAX call to get all customer orders
+        // Update the order table with the received data
+    });
+</script>
+
+</body>
+</html>

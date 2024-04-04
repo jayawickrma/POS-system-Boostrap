@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Management System</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Item Management System</h2>
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Item Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="itemTableBody">
+        <!-- Item data will be populated here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <h4>Add Item</h4>
+      <form id="addItemForm">
+        <div class="form-group">
+          <label for="itemName">Item Name:</label>
+          <input type="text" class="form-control" id="itemName" required>
+        </div>
+        <div class="form-group">
+          <label for="itemDescription">Description:</label>
+          <input type="text" class="form-control" id="itemDescription" required>
+        </div>
+        <div class="form-group">
+          <label for="itemPrice">Price:</label>
+          <input type="text" class="form-control" id="itemPrice" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Item</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <h4>Remove Item</h4>
+      <form id="removeItemForm">
+        <div class="form-group">
+          <label for="removeItemName">Item Name:</label>
+          <input type="text" class="form-control" id="removeItemName" required>
+        </div>
+        <button type="submit" class="btn btn-danger">Remove Item</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <h4>Search Item</h4>
+      <form id="searchItemForm">
+        <div class="form-group">
+          <label for="searchItemName">Item Name:</label>
+          <input type="text" class="form-control" id="searchItemName" required>
+        </div>
+        <button type="submit" class="btn btn-success">Search Item</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <h4>Update Item</h4>
+      <form id="updateItemForm">
+        <div class="form-group">
+          <label for="updateItemName">Item Name:</label>
+          <input type="text" class="form-control" id="updateItemName" required>
+        </div>
+        <div class="form-group">
+          <label for="updateItemDescription">Description:</label>
+          <input type="text" class="form-control" id="updateItemDescription" required>
+        </div>
+        <div class="form-group">
+          <label for="updateItemPrice">Price:</label>
+          <input type="text" class="form-control" id="updateItemPrice" required>
+        </div>
+        <button type="submit" class="btn btn-warning">Update Item</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // JavaScript code for handling form submissions and displaying item table
+
+  // Example: Add Item
+  $('#addItemForm').submit(function(event) {
+    event.preventDefault();
+    var itemName = $('#itemName').val();
+    var itemDescription = $('#itemDescription').val();
+    var itemPrice = $('#itemPrice').val();
+    // Here, you can make an AJAX call to add the item
+    // After successful addition, you can update the item table
+  });
+
+  // Example: Remove Item
+  $('#removeItemForm').submit(function(event) {
+    event.preventDefault();
+    var itemName = $('#removeItemName').val();
+    // Here, you can make an AJAX call to remove the item
+    // After successful removal, you can update the item table
+  });
+
+  // Example: Search Item
+  $('#searchItemForm').submit(function(event) {
+    event.preventDefault();
+    var itemName = $('#searchItemName').val();
+    // Here, you can make an AJAX call to search for the item
+    // Display the item details or update the item table
+  });
+
+  // Example: Update Item
+  $('#updateItemForm').submit(function(event) {
+    event.preventDefault();
+    var itemName = $('#updateItemName').val();
+    var itemDescription = $('#updateItemDescription').val();
+    var itemPrice = $('#updateItemPrice').val();
+    // Here, you can make an AJAX call to update the item
+    // After successful update, you can update the item table
+  });
+
+  // Example: Get All Items
+  $(document).ready(function() {
+    // Here, you can make an AJAX call to get all items
+    // Update the item table with the received data
+  });
+</script>
+
+</body>
+</html>

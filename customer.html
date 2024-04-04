@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Management System</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Customer Manage Page</h2>
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="customerTableBody">
+        <!-- Customer data will be populated here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <h4>Register Customer</h4>
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="registerName">Name:</label>
+          <input type="text" class="form-control" id="registerName" required>
+        </div>
+        <div class="form-group">
+          <label for="registerEmail">Email:</label>
+          <input type="email" class="form-control" id="registerEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="registerPhone">Phone:</label>
+          <input type="text" class="form-control" id="registerPhone" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <h4>Unregister Customer</h4>
+      <form id="unregisterForm">
+        <div class="form-group">
+          <label for="unregisterName">Name:</label>
+          <input type="text" class="form-control" id="unregisterName" required>
+        </div>
+        <button type="submit" class="btn btn-danger">Unregister</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <h4>Find Customer</h4>
+      <form id="findForm">
+        <div class="form-group">
+          <label for="findName">Name:</label>
+          <input type="text" class="form-control" id="findName" required>
+        </div>
+        <button type="submit" class="btn btn-success">Find</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <h4>Update Customer</h4>
+      <form id="updateForm">
+        <div class="form-group">
+          <label for="updateName">Name:</label>
+          <input type="text" class="form-control" id="updateName" required>
+        </div>
+        <button type="submit" class="btn btn-warning">Update</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // JavaScript code for handling form submissions and displaying customer table
+
+  // Example: Register Customer
+  $('#registerForm').submit(function(event) {
+    event.preventDefault();
+    var name = $('#registerName').val();
+    var email = $('#registerEmail').val();
+    var phone = $('#registerPhone').val();
+    // Here, you can make an AJAX call to register the customer
+    // After successful registration, you can update the customer table
+  });
+
+  // Example: Unregister Customer
+  $('#unregisterForm').submit(function(event) {
+    event.preventDefault();
+    var name = $('#unregisterName').val();
+    // Here, you can make an AJAX call to unregister the customer
+    // After successful unregistration, you can update the customer table
+  });
+
+  // Example: Find Customer
+  $('#findForm').submit(function(event) {
+    event.preventDefault();
+    var name = $('#findName').val();
+    // Here, you can make an AJAX call to find the customer
+    // Display the customer details or update the customer table
+  });
+
+  // Example: Update Customer
+  $('#updateForm').submit(function(event) {
+    event.preventDefault();
+    var name = $('#updateName').val();
+    // Here, you can make an AJAX call to update the customer
+    // After successful update, you can update the customer table
+  });
+
+  // Example: Get All Customers
+  $(document).ready(function() {
+    // Here, you can make an AJAX call to get all customers
+    // Update the customer table with the received data
+  });
+</script>
+
+</body>
+</html>
