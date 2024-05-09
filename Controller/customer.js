@@ -3,14 +3,15 @@ import {customers} from "../DB/Db";
 
 function displayCustomers() {
     $("#customerTable").empty();
-    customers.forEach(function(customer, index) {
+    customers.map(function(customer, index) {
+        console.log(customer)
         $("#customerTable").append(
             "<tr><td>" + customer.name + "</td><td>" + customer.address + "</td><td>" + customer.nic + "</td><td>" + customer.phone + "</td><td><button class='btn btn-info btn-sm updateBtn' data-index='" + index + "'>Update</button> <button class='btn btn-danger btn-sm deleteBtn' data-index='" + index + "'>Delete</button></td></tr>"
         );
     });
 }
 
-// Controller
+
 $(document).ready(function(){
     // Add customer
     $("#addCustomer").click(function(){

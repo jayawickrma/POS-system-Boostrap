@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b08e743-772c-428d-913f-a0293d559f4d" name="Changes" comment="applying MVC">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Applying SPA.html" beforeDir="false" afterPath="$PROJECT_DIR$/Applying SPA.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/customer.js" afterDir="false" />
     </list>
@@ -60,7 +61,7 @@
       <workItem from="1714193605752" duration="428000" />
       <workItem from="1714541279648" duration="654000" />
       <workItem from="1714542286377" duration="1128000" />
-      <workItem from="1715230867891" duration="4842000" />
+      <workItem from="1715230867891" duration="8582000" />
     </task>
     <task id="LOCAL-00001" summary="button actions">
       <created>1712288340417</created>
@@ -97,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715234118023</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="applying MVC">
+      <created>1715235760811</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715235760811</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
