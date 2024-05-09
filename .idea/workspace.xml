@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b08e743-772c-428d-913f-a0293d559f4d" name="Changes" comment="button actions">
-      <change afterPath="$PROJECT_DIR$/Applying SPA.html" afterDir="false" />
+    <list default="true" id="2b08e743-772c-428d-913f-a0293d559f4d" name="Changes" comment="Applied SPA(single page application)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +57,7 @@
       <workItem from="1713608726087" duration="1028000" />
       <workItem from="1714193605752" duration="428000" />
       <workItem from="1714541279648" duration="654000" />
+      <workItem from="1714542286377" duration="1128000" />
     </task>
     <task id="LOCAL-00001" summary="button actions">
       <created>1712288340417</created>
@@ -66,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712288340417</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Applied SPA(single page application)">
+      <created>1714542798484</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714542798484</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="button actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="button actions" />
+    <MESSAGE value="Applied SPA(single page application)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Applied SPA(single page application)" />
   </component>
 </project>
