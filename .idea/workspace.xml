@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b08e743-772c-428d-913f-a0293d559f4d" name="Changes" comment="Applied SPA(single page application)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2b08e743-772c-428d-913f-a0293d559f4d" name="Changes" comment="applying MVC">
+      <change beforePath="$PROJECT_DIR$/Applying SPA.html" beforeDir="false" afterPath="$PROJECT_DIR$/Applying SPA.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/customer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -58,6 +60,7 @@
       <workItem from="1714193605752" duration="428000" />
       <workItem from="1714541279648" duration="654000" />
       <workItem from="1714542286377" duration="1128000" />
+      <workItem from="1715230867891" duration="4842000" />
     </task>
     <task id="LOCAL-00001" summary="button actions">
       <created>1712288340417</created>
@@ -73,7 +76,28 @@
       <option name="project" value="LOCAL" />
       <updated>1714542798484</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="applying MVC">
+      <created>1715231764120</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715231764120</updated>
+    </task>
+    <task id="LOCAL-00004" summary="applying MVC">
+      <created>1715234104439</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715234104439</updated>
+    </task>
+    <task id="LOCAL-00005" summary="applying MVC">
+      <created>1715234118023</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715234118023</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +117,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="button actions" />
     <MESSAGE value="Applied SPA(single page application)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Applied SPA(single page application)" />
+    <MESSAGE value="applying MVC" />
+    <option name="LAST_COMMIT_MESSAGE" value="applying MVC" />
   </component>
 </project>

@@ -18,7 +18,7 @@ $(document).ready(function(){
         var address = $("#address").val();
         var nic = $("#nic").val();
         var phone = $("#phone").val();
-        var customer = new Customer(name, address, nic, phone); // Create a new instance of Customer
+        var customer = new customerModel(name, address, nic, phone);
         customers.push(customer);
         displayCustomers();
         $("#name, #address, #nic, #phone").val("");
