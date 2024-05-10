@@ -3,310 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-  <link rel="stylesheet" href="assets/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/navBar.css">
-  <link rel="stylesheet" href="assets/css/customerForm.css">
-  <link rel="stylesheet" href="assets/css/homePage.css">
-  <link rel="stylesheet" href="assets/css/itemForm.css">
-  <link rel="stylesheet" href="assets/css/orderForm.css">
-  <link rel="stylesheet" href="assets/css/orderDetailsForm.css">
-  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/Order.css">
+
 </head>
 <body>
-<main id="customer" class="customer">
-  <div class="customer1">
-    <div class="col-md-4 mt-3">
-      <div class="card" id="customerManage">
-        <div class="card-header text-center gradient-text">
-          <h3>Customer Manage</h3>
-        </div>
+<!--Customer Page-->
+<main id="customerPage">
+  <section>
+    <div id="customer_headline" class="text-center m-3">
+      <h1>Customer Manage</h1>
+    </div>
+    <div class="row">
+      <div id="customerForm" class="col col-lg-6 col-md-12 col-sm-12 col-12">
         <form>
-          <div class="m-3 col-md-11">
-            <label for="customerId" class="form-label">Customer ID :</label>
-            <input type="text" class="form-control" id="customerId">
+          <div class="mb-3">
+            <label for="customerId" class="form-label">Customer Id</label>
+            <input type="number" class="form-control" id="customerId">
           </div>
-          <div class="m-3 col-md-11">
-            <label for="customerName" class="form-label">Customer Name :</label>
+          <div class="mb-3">
+            <label for="customerName" class="form-label">Customer Name</label>
             <input type="text" class="form-control" id="customerName">
           </div>
-          <div class="m-3 col-md-11">
-            <label for="address" class="form-label">Address :</label>
-            <input type="email" class="form-control" id="address">
+          <div class="mb-3">
+            <label for="customerAddress" class="form-label">Customer Address</label>
+            <input type="text" class="form-control" id="customerAddress">
           </div>
-          <div class="m-3 col-md-11">
-            <label for="mobile" class="form-label">Mobile :</label>
-            <input type="tel" class="form-control" id="mobile">
+          <div class="mb-3">
+            <label for="contactNo" class="form-label">Contact NO</label>
+            <input type="tel" class="form-control" id="contactNo">
           </div>
-          <div class="m-3 col-md-11" id="customer_btn">
-            <button type="button" class="btn btn-outline-success">Submit</button>
-            <button type="button" class="btn btn-outline-primary">Update</button>
-            <button type="button" class="btn btn-outline-danger">Delete</button>
-            <button type="button" class="btn btn-outline-warning">Reset</button>
+          <div id="customerButton" class="mt-3">
+            <button id="customer_save" type="button" class="btn btn-success">Submit</button>
+            <button type="button" class="btn btn-primary">Update</button>
+            <button type="button" class="btn btn-danger">Delete</button>
           </div>
         </form>
       </div>
     </div>
+    <hr>
+  </section>
 
-    <div class="col-md-4 mt-3">
-      <div class="card" id="viewCustomer">
-        <div class="card-header text-center gradient-text">
-          <h3>View Customers</h3>
-        </div>
-
-        <form class="d-flex" role="search">
-          <input id="searchField2" class="form-control me-3 searchField" type="search" placeholder="Search" aria-label="Search">
-          <button id="search2" class="btn btn-outline-success searchBtn" type="button">Search</button>
-        </form>
-
-        <div class="col m-3">
-          <table class="table" id="customerTable">
-            <thead class="table-color">
-            <tr>
-              <th scope="col">Customer ID</th>
-              <th scope="col">Customer Name</th>
-              <th scope="col">Address</th>
-              <th scope="col">Mobile</th>
-            </tr>
-            </thead>
-            <tbody id="customer-tbl-body"></tbody>
-          </table>
-        </div>
-      </div>
+  <section>
+    <div >
+      <h1 id="viewCustomers" >View Customers</h1>
     </div>
-  </div>
+    <table class="table" id="customerTable">
+      <thead id="customer_table_head" class="table-light">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Contact NO</th>
+      </tr>
+      </thead>
+      <tbody id="customer-tbl-body"></tbody>
+    </table>
+  </section>
 </main>
 
-
-<main id="item" class="item">
-  <div class="item1">
-
-    <div class="col-md-4 mt-3">
-      <div class="card" id="itemManage">
-        <div class="card-header text-center gradient-text">
-          <h3>Item Manage</h3>
-        </div>
+<!--Item Page-->
+<main id="itemPage">
+  <section>
+    <div id="item_headline" class="text-center m-3">
+      <h1>Item Manage</h1>
+    </div>
+    <div class="row">
+      <div id="form" class="col col-lg-6 col-md-12 col-sm-12 col-12">
         <form>
-          <div class="m-3 col-md-11">
-            <label for="itemId" class="form-label">item code :</label>
-            <input type="text" class="form-control" id="itemId">
+          <div class="mb-3">
+            <label for="itemId" class="form-label">Item Code</label>
+            <input type="number" class="form-control" id="itemId">
           </div>
-          <div class="m-3 col-md-11">
-            <label for="itemName" class="form-label">item Description :</label>
+          <div class="mb-3">
+            <label for="itemName" class="form-label">Item Description</label>
             <input type="text" class="form-control" id="itemName">
           </div>
-          <div class="m-3 col-md-11">
-            <label for="address" class="form-label">Price :</label>
-            <label for="price"></label><input type="email" class="form-control" id="price">
+          <div class="mb-3">
+            <label for="itemQty" class="form-label">Item Qty</label>
+            <input type="tel" class="form-control" id="itemQty">
           </div>
-          <div class="m-3 col-md-11">
-            <label for="mobile" class="form-label">Qty :</label>
-            <label for="qty"></label><input type="tel" class="form-control" id="qty">
+          <div class="mb-3">
+            <label for="itemPrice" class="form-label">Item Price</label>
+            <input type="text" class="form-control" id="itemPrice">
           </div>
-          <div class="m-3 col-md-11" id="item_btn">
-            <button type="button" class="btn btn-outline-success">Submit</button>
-            <button type="button" class="btn btn-outline-primary">Update</button>
-            <button type="button" class="btn btn-outline-danger">Delete</button>
-            <button type="reset" class="btn btn-outline-warning">Reset</button>
+          <div id="itemButton" class="mt-3">
+            <button type="button" class="btn btn-success">Submit</button>
+            <button type="button" class="btn btn-primary">Update</button>
+            <button type="button" class="btn btn-danger">Delete</button>
           </div>
         </form>
       </div>
     </div>
+  </section>
 
-    <div class="col-md-4 mt-3">
-      <div class="card" id="viewItem">
-        <div class="card-header text-center gradient-text">
-          <h3>View Items</h3>
-        </div>
+  <section>
+    <div >
+      <h1 id="viewItem" >View Items</h1>
+    </div>
+    <table class="table" id="itemTable">
+      <thead id="item_table_head" class="table-light">
+      <tr>
+        <th scope="col">Code</th>
+        <th scope="col">Description</th>
+        <th scope="col">Qty</th>
+        <th scope="col">Price</th>
+      </tr>
+      </thead>
+      <tbody id="item_table_body"></tbody>
+    </table>
+  </section>
+</main>
 
-        <form class="d-flex" role="search">
-          <input id="searchField3" class="form-control me-3 searchField" type="search" placeholder="Search" aria-label="Search">
-          <button id="search3" class="btn btn-outline-success searchBtn" type="button">Search</button>
+<!--Order Page-->
+<main id="orderPage">
+  <section>
+    <div id="order_headline" class="text-center m-3">
+      <h1>Invoice Details</h1>
+    </div>
+    <div class="row">
+      <div id="orderForm" class="col col-lg-6 col-md-12 col-sm-12 col-12">
+        <form>
+          <div class="mb-3">
+            <label for="orderId" class="form-label">Order Id</label>
+            <input type="text" class="form-control" id="orderId">
+          </div>
+          <div class="mb-3">
+            <label for="orderDate" class="form-label">Order Date</label>
+            <input type="text" class="form-control" id="orderDate">
+          </div>
+          <div class="mb-3">
+            <label for="orderCustomerId" class="form-label">Customer Id</label>
+            <select class="form-select" aria-label="Default select example" id="orderCustomerId">
+              <option selected>Select the customer</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="orderCustomerName" class="form-label">Customer Name</label>
+            <input type="tel" class="form-control" id="orderCustomerName">
+          </div>
+          <div class="mb-3">
+            <label for="orderCustomerAddress" class="form-label">Customer Address</label>
+            <input type="tel" class="form-control" id="orderCustomerAddress">
+          </div>
+          <div class="mb-3">
+            <label for="orderContactNo" class="form-label">Contact No</label>
+            <input type="tel" class="form-control" id="orderContactNo">
+          </div>
         </form>
-
-        <div class="col m-3">
-          <table class="table" id="itemTable">
-            <thead class="table-color">
-            <tr>
-              <th scope="col">Item Code</th>
-              <th scope="col">Item Description</th>
-              <th scope="col">Price</th>
-              <th scope="col">Qty</th>
-            </tr>
-            </thead>
-            <tbody id="item-tbl-body"></tbody>
-          </table>
-        </div>
       </div>
     </div>
-  </div>
+    <!--<div class="container"></div>-->
+    <h3 id="total">Total :</h3>
+    <div class="discount">
+      <label for="discount" class="form-label">Discount</label>
+      <input type="tel" class="form-control" id="discount">
+    </div>
+    <h3 id="subTotal">Sub Total :</h3>
+    <div class="cash">
+      <label for="cash" class="form-label">Cash</label>
+      <input type="tel" class="form-control" id="cash">
+    </div>
+    <div class="balance">
+      <label for="balance" class="form-label">Balance</label>
+      <input type="tel" class="form-control" id="balance">
+    </div>
+    <button type="button" class="btn btn-primary" id="purchase">Purchase</button>
+
+    <div id="container">
+      <div></div>
+    </div>
+    <section>
+      <div id="selectItem" class="text-center m-3">
+        <h1>Select Items</h1>
+      </div>
+      <div class="row">
+        <div id="form1" class="col col-lg-6 col-md-12 col-sm-12 col-12">
+          <form id="itemSelect">
+            <div class="mb-3">
+              <label for="itemCode" class="form-label">Item Code</label>
+              <select class="form-select" aria-label="Default select example" id="itemCode">
+                <option selected>Select the item</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="itemDescription" class="form-label">Item Description</label>
+              <input type="text" class="form-control" id="itemDescription">
+            </div>
+            <div class="mb-3">
+              <label for="price" class="form-label">Price</label>
+              <input type="number" class="form-control" id="price">
+            </div>
+            <div class="mb-3">
+              <label for="qty" class="form-label">Qty</label>
+              <input type="number" class="form-control" id="qty">
+            </div>
+            <div class="mb-3">
+              <label for="orderQty" class="form-label">Order Qty</label>
+              <input type="number" class="form-control" id="orderQty">
+            </div>
+            <button id="addItem" type="button" class="btn btn-primary btn-sm">Add Item</button>
+          </form>
+        </div>
+      </div>
+      <section id="selectItemTable">
+        <table class="table" id="table">
+          <thead id="table_head" class="table-light">
+          <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Description</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Total</th>
+          </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </section>
+  </section>
 </main>
 
-<main id="order" class="order">
-  <form class="d-flex" role="search">
-    <input id="searchField" class="form-control me-3 searchField" type="search" placeholder="Search" aria-label="Search">
-    <button id="search" class="btn btn-outline-success searchBtn" type="button">Search</button>
-  </form>
-  <div class="order1">
-    <div class="col-md-4 mt-3">
-      <div class="card" id="invoiceDetails">
-        <div class="card-header text-center gradient-text">
-          <h3>Invoice Details</h3>
-        </div>
-        <div class="m-3 col-md-11">
-          <label for="order_id" class="form-label">Order Id :</label>
-          <input type="text" class="form-control" id="order_id" disabled>
-        </div>
-
-        <div class="m-3 col-md-11">
-          <label for="order_date" class="form-label">Order Date :</label>
-          <input type="text" class="form-control" id="order_date" disabled>
-        </div>
-        <div class="m-3 col-md-11">
-          <label for="customer_id1" class="form-label">Customer Id</label>
-          <select class="form-select" aria-label="Disabled select example" id="customer_id1">
-            <option selected>Select Customer Id</option>
-          </select>
-        </div>
-        <div class="m-3 col-md-11">
-          <label for="customer_name1" class="form-label">Customer Name</label>
-          <input type="text" class="form-control" id="customer_name1" placeholder="Customer Name Here" disabled>
-        </div>
-
-        <div class="m-3 col-md-11">
-          <label for="total" class="form-label">Total</label>
-          <input type="number" class="form-control" id="total" placeholder="Total Here" disabled>
-        </div>
-
-        <div class="m-3 col-md-11">
-          <label for="discount" class="form-label">Discount</label>
-          <input type="number" class="form-control" id="discount" placeholder="Discount Here">
-        </div>
-
-        <div class="m-3 col-md-11">
-          <label for="sub_total" class="form-label">Sub Total </label>
-          <input type="number" class="form-control" id="sub_total" placeholder="Sub Total Here" disabled>
-        </div>
-
-        <div class="m-3 col-md-11">
-          <label for="Cash" class="form-label">Cash </label>
-          <input type="number" class="form-control" id="Cash" placeholder="Cash Here">
-        </div>
-
-        <div class="m-3 col-md-11">
-          <label for="balance" class="form-label">Balance </label>
-          <input type="number" class="form-control" id="balance" placeholder="Balance Here" disabled>
-        </div>
-
-
-        <div class="mt-3" id="order_btn">
-          <button id="submitBtn2" type="button" class="btn btn-outline-success">Purchase</button>
-          <button id="updateBtn2" type="button" class="btn btn-outline-primary">Update</button>
-          <button id="deleteBtn2" type="button" class="btn btn-outline-danger">Delete</button>
-          <button id="resetBtn2" type="reset" class="btn btn-outline-warning">Reset</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 mt-3">
-      <div class="card" id="orderDetails1">
-        <div class="card-header text-center gradient-text">
-          <h3>Select Items</h3>
-        </div>
-        <div class="m-3 col-md-11">
-          <label for="item_code1" class="form-label">Item Code</label>
-          <select class="form-select" aria-label="Disabled select example" id="item_code1">
-            <option selected>Select Item Code</option>
-          </select>
-        </div>
-        <div class="m-3 col-md-11">
-          <label for="item_name1" class="form-label">Item Name</label>
-          <input type="text" class="form-control" id="item_name1" placeholder="Item Name Here" disabled>
-        </div>
-        <div class="m-3 col-md-11">
-          <label for="price1" class="form-label">Price</label>
-          <input type="number" class="form-control" id="price1" placeholder="Price Here" disabled>
-        </div>
-        <div class="m-3 col-md-11">
-          <label for="qty_on_hand" class="form-label">Qty on Hand</label>
-          <input type="number" class="form-control" id="qty_on_hand" placeholder="Qty on hand Here" disabled>
-        </div>
-        <div class="m-3 col-md-11">
-          <label for="getQty" class="form-label">Getting Qty</label>
-          <input type="number" class="form-control" id="getQty" placeholder="Qty Here">
-        </div>
-        <div class="mt-3" id="order_item_btn">
-          <button id="addBtn" type="button" class="btn btn-outline-success">Add</button>
-          <button id="UpdateBtn3" type="button" class="btn btn-outline-primary">Update</button>
-          <button id="removeBtn" type="button" class="btn btn-outline-danger">Remove</button>
-          <button id="resetItemDetailsBtn" type="reset" class="btn btn-outline-warning">Reset</button>
-        </div>
-        <div class="col m-3">
-          <table class="table" id="item-order-table">
-            <thead class="table-color">
-            <tr>
-              <th scope="col">Item Code</th>
-              <th scope="col">Item Name</th>
-              <th scope="col">Price Per Kg</th>
-              <th scope="col">Qty On Hand</th>
-              <th scope="col">Qty</th>
-            </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
+<!--OrderDetail Page-->
+<main id="viewOrderDetailsPage">
+  <!--<section>
+      <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
+          <div id="container-fluid" class="container-fluid">
+              <h2>POS System</h2>
+              &lt;!&ndash;<a class="navbar-brand" href="#">Navbar</a>&ndash;&gt;
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div id="navbar-nav" class="navbar-nav">
+                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                      <a class="nav-link active" aria-current="page" href="customer.html">Customer</a>
+                      <a class="nav-link active" aria-current="page" href="item.html">Item</a>
+                      <a class="nav-link active" aria-current="page" href="order.html">Order</a>
+                      <a class="nav-link active" aria-current="page" href="viewOrderDetails.html">
+                          <button>View Order Details</button>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </nav>
+  </section>-->
+  <h1>Order Details</h1>
+  <section id="viewOrderTable">
+    <table class="table" id="orderDetailsTable">
+      <thead id="order_details_table_head" class="table-light">
+      <tr>
+        <th scope="col">Order Id</th>
+        <th scope="col">Order Date</th>
+        <th scope="col">Item Code</th>
+        <th scope="col">Customer Id</th>
+        <th scope="col">Qty</th>
+        <th scope="col">Price</th>
+        <th scope="col">Discount</th>
+        <th scope="col">Sub Total</th>
+      </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
 </main>
 
-<!--Add OrderDetails page section-->
-<main id="order_Details" class="order_Details">
-  <div class="order_details1">
-    <div class="col-md-4 mt-3">
-      <div class="card" id="orderDetailsForm">
-        <div class="card-header text-center gradient-text">
-          <h3>Order Details</h3>
-        </div>
-
-        <form class="d-flex" role="search">
-          <input id="searchField4" class="form-control me-3 searchField" type="search" placeholder="Search" aria-label="Search">
-          <button id="search4" class="btn btn-outline-success searchBtn" type="button">Search</button>
-        </form>
-
-        <div class="col m-3">
-          <table class="table" id="order-details-table">
-            <thead class="table-color">
-            <tr>
-              <th scope="col">Order Id</th>
-              <th scope="col">Order Date</th>
-              <th scope="col">Customer Id</th>
-              <th scope="col">Total</th>
-              <th scope="col">Discount</th>
-              <th scope="col">Sub Total</th>
-              <th scope="col">Cash</th>
-              <th scope="col">Balance</th>
-            </tr>
-            </thead>
-            <tbody id="order-details-tbody"></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
-
-<script src="assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<!--link JS Dependencies-->
+<script src="assets/lib/bootstrap-5.3.1-dist/js/jquery_min.js"></script>
+<script src="assets/lib/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
-<script src="assets/js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
 
+<!--link Controllers-->
 <script type="module" src="controller/CustomerController.js"></script>
 <script type="module" src="controller/ItemController.js"></script>
 <script type="module" src="controller/OrderController.js"></script>
-<script type="module" src="controller/orderDetailsController.js"></script>
 
+</body>
+</html>
 </body>
 </html>

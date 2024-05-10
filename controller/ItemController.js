@@ -1,218 +1,173 @@
-import {customer_db, item_db} from "../db/db.js";
 import {ItemModel} from "../model/ItemModel.js";
+import {customer_db, item_db} from "../db/db.js";
+import {setCustomerIds, setItemIds} from "./OrderController.js";
 
-let itemId = $("#itemId");
-let itemName = $("#itemName");
-let price  = $("#price");
-let qty= $("#qty");
+var row_index = null;
+$("#itemButton>button[type='button']").eq(0).on("click", () =>{
+    let item_code = $("#itemId").val();
+    let item_name = $("#itemName").val();
+    let item_qty = parseInt($("#itemQty").val());
+    let item_price = parseFloat($("#itemPrice").val());
 
-let submit = $("#item_btn>button").eq(0);
-let update = $("#item_btn>button").eq(1);
-let delete_btn = $("#item_btn>button").eq(2);
-let reset = $("#item_btn>button").eq(3);
+    if (validate(item_code,'item code') && validate(item_name,'item name') &&
+        validate(item_qty,'item qty') && validate(item_price,'item price')) {
 
-let searchBtn=$('#search3');
-let searchField=$('#searchField3');
+        if (getItemIndex(item_code) < 0) {
+            Swal.fire({
+                title: 'Do you want to save the changes?',
+                showDenyButton: true,
+                confirmButtonText: 'Save',
+                denyButtonText: `Don't save`,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    let item_obj = new ItemModel(item_code, item_name, item_qty, item_price);
 
+                    item_db.push(item_obj);
 
-searchField.on('input', function () {
-    let search_term = searchField.val();
+                    loadStudentData();
+                    setItemIds();
 
-    let results = item_db.filter((item) =>
+                    clear();
 
-        item.itemCode.toLowerCase().startsWith(search_term.toLowerCase()) || item.itemName.toLowerCase().startsWith(search_term.toLowerCase())
+                    Swal.fire('Customer Saved!', '', 'success');
 
-    );
-
-    $('#item-tbl-body').eq(0).empty();
-    results.map((item, index) => {
-        let tbl_row = `<tr>
-            <th scope="row">${item.itemCode}</th>
-            <td>${item.itemName}</td>
-            <td>${item.price}</td>
-            <td>${item.qty}</td>
-        </tr>`;
-        $('#item-tbl-body').eq(0).append(tbl_row);
-    });
-
-});
-
-function generateItemCode() {
-    let highestItemCode = 0;
-
-    for (let i = 0; i < item_db.length; i++) {
-        // Extract the numeric part of the item code
-        const numericPart = parseInt(item_db[i].itemCode.split('-')[1]);
-
-        // Check if the numeric part is greater than the current highest
-        if (!isNaN(numericPart) && numericPart > highestItemCode) {
-            highestItemCode = numericPart;
+                } else if (result.isDenied) {
+                    Swal.fire('Changes are not saved', '', 'info')
+                }
+            });
+        }else{
+            Swal.fire({
+                icon: 'error',
+                title: 'Item is already exists 😔',
+            });
         }
     }
 
-    // Increment the highest numeric part and format as "item-XXX"
-    return `I-${String(highestItemCode + 1).padStart(3, '0')}`;
+});
+
+const clear = () =>{
+    $("#itemId").val("");
+    $("#itemName").val("");
+    $("#itemQty").val("");
+    $("#itemPrice").val("");
+
 }
-
-function resetColumns() {
-    reset.click();
-    itemId.val(generateItemCode());
-    submit.prop("disabled", false);
-    delete_btn.prop("disabled", true);
-    update.prop("disabled", true);
-}
-
-$("#item_page").eq(0).on('click',function (){
-    itemId.val(generateItemCode());
-    populateItemTBL();
-})
-
-function populateItemTBL(){
-    $("#item-tbl-body").eq(0).empty();
-    item_db.map((item)=>{
-        $("#item-tbl-body").eq(0).append(
-            `<tr>
-                <th scope="row">${item.itemCode}</th>
-                <td>${item.itemName}</td>
-                <td>${item.price}</td>
-                <td>${item.qty}</td>
-            </tr>`
-        );
+export const loadStudentData = () =>{
+    $('#item_table_body').empty();
+    item_db.map((item, ) =>{
+        let record = `<tr><td class="item_code">${item.item_code}</td><td class="item_description">${item.item_description}</td>
+      <td class="item_qty">${item.item_qty}</td><td class="item_price">${item.item_price}</td> `
+        $('#item_table_body').append(record);
     });
 }
 
-function validation(value,message,test){
-    if(!value){
-        showValidationError('Null Input','Input '+message);
-        return false;
+$("#itemButton>button[type='button']").eq(1).on("click", () =>{
+    let item_code = $("#itemId").val();
+    let item_name = $("#itemName").val();
+    let item_qty = $("#itemQty").val();
+    let item_price = $("#itemPrice").val();
+
+    if (validate(item_code,'item code') && validate(item_name,'item name') &&
+        validate(item_qty,'item qty') && validate(item_price,'item price')) {
+
+        let item_obj = new ItemModel(item_code, item_name, item_qty, item_price);
+
+        let index = item_db.findIndex(item => item.item_code === item_code);
+
+        if (index >= 0) {
+
+            Swal.fire({
+                title: 'Do you want to update the item?',
+                showDenyButton: true,
+                confirmButtonText: 'Update',
+                denyButtonText: `Don't update`,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    item_db[index] = item_obj;
+
+                    loadStudentData();
+
+                    clear();
+
+                    Swal.fire('Customer Updated!', '', 'success');
+
+                } else if (result.isDenied) {
+                    Swal.fire('Changes are not updated!', '', 'info')
+                }
+            });
+        }else{
+            Swal.fire({
+                icon: 'error',
+                title: 'Item did not exists 😓',
+            });
+        }
     }
-    if(test===null){
-        return true;
+
+});
+
+$("#itemButton>button[type='button']").eq(2).on("click", () => {
+    let item_code = $("#itemId").val();
+
+    if(validate(item_code,'item code')) {
+
+        let index = item_db.findIndex(item => item.item_code === item_code);
+
+        if (index >= 0) {
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    item_db.splice(index, 1);
+
+                    loadStudentData();
+                    setItemIds();
+
+                    clear();
+
+                    Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+                }
+            });
+        }else{
+            Swal.fire({
+                icon: 'error',
+                title: 'Item did not exists 😓',
+            });
+        }
     }
-    if(!test){
-        showValidationError('Invalid Input','Invalid Input '+message);
+
+})
+$("#item_table_body").on("click","tr", function () {
+    row_index = $(this).index();
+
+    let item_id = $(this).find(".item_code").text();
+    let item_description = $(this).find(".item_description").text();
+    let item_qty = $(this).find(".item_qty").text();
+    let item_price = $(this).find(".item_price").text();
+
+    $("#itemId").val(item_id);
+    $("#itemName").val(item_description);
+    $("#itemQty").val(item_qty);
+    $("#itemPrice").val(item_price);
+})
+
+function validate(value, field_name){
+    if (!value){
+        Swal.fire({
+            icon: 'warning',
+            title: `Please enter the ${field_name}!`
+        });
         return false;
     }
     return true;
 }
 
-/*Show Validation Error*/
-function showValidationError(title, text) {
-    Swal.fire({
-        icon: 'error',
-        title: title,
-        text: text,
-        footer: '<a href="">Why do I have this issue?</a>'
-    });
+const getItemIndex = function (item_code) {
+    return item_db.findIndex(item => item.item_code === item_code);
 }
-
-submit.on('click',function (){
-    let itemCodeValue = itemId.val();
-    let itemNameValue = itemName.val().trim();
-    let priceValue = parseFloat(price.val());
-    let qtyOnHandValue = parseInt(qty.val(), 10);
-
-    if (validation(itemNameValue, "item name", null) &&
-        validation(priceValue, "Price", null) &&
-        validation(qtyOnHandValue, "Qty On Hand",null)){
-        let item = new ItemModel(
-            itemCodeValue,
-            itemNameValue,
-            priceValue,
-            qtyOnHandValue
-        );
-
-        Swal.fire(
-            'Save Successfully !',
-            'Successful',
-            'success'
-        );
-
-        item_db.push(item);
-        populateItemTBL();
-        resetColumns();
-    }
-})
-
-$('#itemTable').on('click', 'tbody tr', function(){
-    let itemCodeValue = $(this).find('th').text();
-    console.log(itemCodeValue);
-    let itemNameValue = $(this).find('td:eq(0)').text();
-    let priceValue = $(this).find('td:eq(1)').text();
-    let qtyValue = $(this).find('td:eq(2)').text();
-
-    itemId.val(itemCodeValue);
-    itemName.val(itemNameValue);
-    price.val(priceValue);
-    qty.val(qtyValue);
-
-    submit.prop("disabled", true);
-    delete_btn.prop("disabled", false);
-    update.prop("disabled", false);
-})
-
-update.on('click', function (){
-    let itemCodeValue = itemId.val();
-    let itemNameValue = itemName.val().trim();
-    let priceValue = parseFloat(price.val());
-    let qtyOnHandValue = parseInt(qty.val(), 10);
-
-    if (validation(itemNameValue, "item name", null) &&
-        validation(priceValue, "Price", null) &&
-        validation(qtyOnHandValue, "Qty On Hand",null)){
-        item_db.map((item)=>{
-            if (item.itemCode === itemCodeValue){
-                item.itemName = itemNameValue;
-                item.price = priceValue;
-                item.qty = qtyOnHandValue;
-            }
-        });
-
-        Swal.fire(
-            'Update Successfully !',
-            'Successful',
-            'success'
-        );
-
-        populateItemTBL();
-        resetColumns();
-    }
-})
-
-reset.on('click', function(e) {
-    e.preventDefault();
-    itemId.val(generateItemCode());
-    itemName.val('');
-    price.val('');
-    qty.val('');
-    submit.prop("disabled", false);
-    delete_btn.prop("disabled", true);
-    update.prop("disabled", true);
-});
-
-delete_btn.on('click', function (){
-    let itemCodeValue = itemId.val();
-
-    Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Delete'
-    }).then((result)=>{
-        if (result.isConfirmed){
-            let index = item_db.findIndex(item => item.itemCode === itemCodeValue);
-            item_db.splice(index, 1);
-            populateItemTBL();
-            resetColumns();
-            Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
-            )
-            submit.prop("disabled", false);
-        }
-    });
-})
