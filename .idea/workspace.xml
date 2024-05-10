@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b08e743-772c-428d-913f-a0293d559f4d" name="Changes" comment="applying MVC">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2b08e743-772c-428d-913f-a0293d559f4d" name="Changes" comment="customer Updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -60,6 +58,7 @@
       <workItem from="1714541279648" duration="654000" />
       <workItem from="1714542286377" duration="1128000" />
       <workItem from="1715230867891" duration="9909000" />
+      <workItem from="1715364300247" duration="2180000" />
     </task>
     <task id="LOCAL-00001" summary="button actions">
       <created>1712288340417</created>
@@ -110,7 +109,28 @@
       <option name="project" value="LOCAL" />
       <updated>1715273880616</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="customer Updated">
+      <created>1715365080223</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715365080223</updated>
+    </task>
+    <task id="LOCAL-00009" summary="customer Updated">
+      <created>1715365919075</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715365919075</updated>
+    </task>
+    <task id="LOCAL-00010" summary="customer Updated">
+      <created>1715366246182</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715366246182</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +151,7 @@
     <MESSAGE value="button actions" />
     <MESSAGE value="Applied SPA(single page application)" />
     <MESSAGE value="applying MVC" />
-    <option name="LAST_COMMIT_MESSAGE" value="applying MVC" />
+    <MESSAGE value="customer Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="customer Updated" />
   </component>
 </project>
