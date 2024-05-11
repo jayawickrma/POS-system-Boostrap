@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b08e743-772c-428d-913f-a0293d559f4d" name="Changes" comment="customer Updated">
-      <change beforePath="$PROJECT_DIR$/Pages/Dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SPA/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/SPA/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/homePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/navBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" />
+    <list default="true" id="2b08e743-772c-428d-913f-a0293d559f4d" name="Changes" comment="dasshboard updatede">
+      <change afterPath="$PROJECT_DIR$/assets/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +39,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Nisha/POS-boostrap",
+    "last_opened_file_path": "C:/Users/Nisha/POS-boostrap/assets/css",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -54,6 +50,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nisha\POS-boostrap\assets\css" />
       <recent name="C:\Users\Nisha\POS-boostrap" />
       <recent name="C:\Users\Nisha\POS-boostrap\db" />
       <recent name="C:\Users\Nisha\POS-boostrap\model" />
@@ -82,6 +79,7 @@
       <workItem from="1715230867891" duration="9909000" />
       <workItem from="1715364300247" duration="2180000" />
       <workItem from="1715366522459" duration="2442000" />
+      <workItem from="1715368995942" duration="4121000" />
     </task>
     <task id="LOCAL-00001" summary="button actions">
       <created>1712288340417</created>
@@ -174,7 +172,42 @@
       <option name="project" value="LOCAL" />
       <updated>1715368204916</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="customer Updated">
+      <created>1715370298124</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715370298124</updated>
+    </task>
+    <task id="LOCAL-00015" summary="customer Updated">
+      <created>1715370391500</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715370391500</updated>
+    </task>
+    <task id="LOCAL-00016" summary="customer Updated">
+      <created>1715374630710</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1715374630710</updated>
+    </task>
+    <task id="LOCAL-00017" summary="customer Updated">
+      <created>1715374670700</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1715374670700</updated>
+    </task>
+    <task id="LOCAL-00018" summary="dasshboard updatede">
+      <created>1715374855313</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1715374855313</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +229,7 @@
     <MESSAGE value="Applied SPA(single page application)" />
     <MESSAGE value="applying MVC" />
     <MESSAGE value="customer Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="customer Updated" />
+    <MESSAGE value="dasshboard updatede" />
+    <option name="LAST_COMMIT_MESSAGE" value="dasshboard updatede" />
   </component>
 </project>

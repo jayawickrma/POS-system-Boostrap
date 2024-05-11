@@ -4,82 +4,67 @@
     <meta charset="UTF-8">
     <title>Assignment 11</title>
     <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/Home.css">
+
     <link rel="stylesheet" href="assets/css/Customer.css">
     <link rel="stylesheet" href="assets/css/Item.css">
+
     <link rel="stylesheet" href="assets/css/Order.css">
     <link rel="stylesheet" href="assets/css/viewOrderDetails.css">
     <link rel="stylesheet" href="assets/lib/bootstrap-5.3.1-dist/css/bootstrap.min.css">
 </head>
 <body>
-<!--neeed to add a new dashboard-->
-<header>
-    <section>
-        <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
-            <div id="container-fluid" class="container-fluid">
-                <h2>POS System</h2>
-                <!--<a class="navbar-brand" href="#">Navbar</a>-->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div id="navbar-nav" class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#homePage">Home</a>
-                        <a class="nav-link active" aria-current="page" href="#customerPage">Customer</a>
-                        <a class="nav-link active" aria-current="page" href="#itemPage">Item</a>
-                        <a class="nav-link active" aria-current="page" href="#orderPage">Order</a>
-                        <a class="nav-link active" aria-current="page" href="#viewOrderDetailsPage">
-                            <button>View Order Details</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </section>
-</header>
-<!--Home Page-->
-<main class="home_page" id="homePage">
-    <section class="home_page_paragraph">
-        <h1>Welcome To POS System</h1>
-    </section>
-    <section id="image">
-        <img src="assets/img/pos%20capture%20(1).png" alt="">
-    </section>
-    <!--Add bar graph-->
-    <!--<div class="chart-wrap vertical">
 
-        <div class="grid">
-            <div class="bar" style="&#45;&#45;bar-value:85%;" data-name="Monday" title="Monday 85%"></div>
-            <div class="bar" style="&#45;&#45;bar-value:23%;" data-name="Tuesday" title="Tuesday 23%"></div>
-            <div class="bar" style="&#45;&#45;bar-value:7%;" data-name="Wednesday" title="Wednesday 7%"></div>
-            <div class="bar" style="&#45;&#45;bar-value:38%;" data-name="Thursday" title="Thursday 38%"></div>
-            <div class="bar" style="&#45;&#45;bar-value:35%;" data-name="Friday" title="Friday 35%"></div>
-            <div class="bar" style="&#45;&#45;bar-value:30%;" data-name="Saturday" title="Saturday 30%"></div>
-            <div class="bar" style="&#45;&#45;bar-value:5%;" data-name="Sunday" title="Sunday 5%"></div>
-        </div>
-    </div>-->
-    <section class="count_details">
-        <div>
-            <img src="assets/img/Customer.png" alt="customer.png">
-            <h3 class="count_details_topic">Customer</h3>
-            <h3 class="count">32</h3>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#home">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#customerPage">Customer Management</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#itemPage">Item Management</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#orderPage">Order Management</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#viewOrderDetailsPage">Order Details Management</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-        <div>
-            <img src="assets/img/item.png" alt="item.png">
-            <h3 class="count_details_topic">Item</h3>
-            <h3 class="count">32</h3>
-        </div>
+<main id="home">
+    <div id="about" class="container py-4">
+        <h2>About Us</h2>
+        <p>This is where you can introduce your company and tell visitors about your mission, values, and team.</p>
+    </div>
 
-        <div>
-            <img src="assets/img/order.png" alt="order.png">
-            <h3 class="count_details_topic">Order</h3>
-            <h3 class="count">32</h3>
+    <div id="services" class="bg-light py-4">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>Describe the services you offer and how they can benefit your customers.</p>
         </div>
+    </div>
 
-    </section>
+    <div id="contact" class="container py-4">
+        <h2>Contact Us</h2>
+        <p>Provide contact information and a contact form for visitors to get in touch with you.</p>
+    </div>
+
+    <footer class="bg-dark text-light text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+
 </main>
+
+
+
 
 <!--Customer Page-->
 <main id="customerPage">
