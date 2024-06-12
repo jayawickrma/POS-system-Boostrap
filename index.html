@@ -13,62 +13,64 @@
     <link rel="stylesheet" href="assets/lib/bootstrap-5.3.1-dist/css/bootstrap.min.css">
 </head>
 <body>
-
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#home">Dashboard</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#customerPage">Customer Management</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#itemPage">Item Management</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#orderPage">Order Management</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#viewOrderDetailsPage">Order Details Management</a>
-            </li>
-        </ul>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a id="nav-home" class="nav-link" href="#" data-page="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a id="nav-customer" class="nav-link" href="#customer" data-page="customer">Customers</a>
+                </li>
+                <li class="nav-item">
+                    <a id="nav-inventory" class="nav-link" href="#itemPage" data-page="itemPage">Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-page="orderPage">Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-page="viewOrderDetailsPage">Order Details</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 
-<main id="home">
-    <div id="about" class="container py-4">
-        <h2>About Us</h2>
-        <p>This is where you can introduce your company and tell visitors about your mission, values, and team.</p>
-    </div>
-
-    <div id="services" class="bg-light py-4">
-        <div class="container">
-            <h2>Our Services</h2>
-            <p>Describe the services you offer and how they can benefit your customers.</p>
+<!-- Main content -->
+<main id="homePage" class="container py-4">
+    <!-- Home Section -->
+    <section id="home" class="active">
+        <div id="about" class="container py-4">
+            <h2>About Us</h2>
+            <p>This is where you can introduce your company and tell visitors about your mission, values, and team.</p>
         </div>
-    </div>
-
-    <div id="contact" class="container py-4">
-        <h2>Contact Us</h2>
-        <p>Provide contact information and a contact form for visitors to get in touch with you.</p>
-    </div>
-
-    <footer class="bg-dark text-light text-center py-3">
-        <div class="container">
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        <div id="services" class="bg-light py-4">
+            <div class="container">
+                <h2>Our Services</h2>
+                <p>Describe the services you offer and how they can benefit your customers.</p>
+            </div>
         </div>
-    </footer>
-
+        <div id="contact" class="container py-4">
+            <h2>Contact Us</h2>
+            <p>Provide contact information and a contact form for visitors to get in touch with you.</p>
+        </div>
+        <footer class="bg-dark text-light text-center py-3">
+            <div class="container">
+                <p>&copy; 2024 Your Company. All rights reserved.</p>
+            </div>
+        </footer>
+    </section>
 </main>
 
-
-
-
 <!--Customer Page-->
-<main id="customerPage">
-    <section>
+<main class="container py-4" id="customerPage">
+    <section id="customer">
         <div id="customer_headline" class="text-center m-3">
             <h1>Customer Manage</h1>
         </div>
@@ -337,5 +339,6 @@
 <script type="module" src="controller/ItemController.js"></script>
 <script type="module" src="controller/OrderController.js"></script>
 
+</main>
 </body>
 </html>

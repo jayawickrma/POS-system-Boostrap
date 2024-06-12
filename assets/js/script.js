@@ -1,28 +1,28 @@
 /* navigation */
 
 $('#customerPage').css('display', 'none');
+$('#homePage').css('display', 'none');
 $('#itemPage').css('display', 'none');
 $('#orderPage').css('display', 'none');
 $('#viewOrderDetailsPage').css('display', 'none');
 
-$('#navbar-nav>a').eq(0).on("click", () =>{
-    event.preventDefault();
+$('#nav-home').on("click", () =>{
     $('#homePage').css('display', 'block');
     $('#customerPage').css('display', 'none');
     $('#itemPage').css('display', 'none');
     $('#orderPage').css('display', 'none');
     $('#viewOrderDetailsPage').css('display', 'none');
 });
-$('#navbar-nav>a').eq(1).on("click", () =>{
-    event.preventDefault();
-    $('#customerPage').css('display', 'block');
+$('#nav-customer').on("click", () =>{
     $('#homePage').css('display', 'none');
+    $('#customerPage').css('display', 'block');
+
     $('#itemPage').css('display', 'none');
     $('#orderPage').css('display', 'none');
     $('#viewOrderDetailsPage').css('display', 'none');
+    console.log("AAA")
 });
-$('#navbar-nav>a').eq(2).on("click", () =>{
-    event.preventDefault();
+$('#nav-inventory').on("click", () =>{
     $('#itemPage').css('display', 'block');
     $('#customerPage').css('display', 'none');
     $('#homePage').css('display', 'none');
