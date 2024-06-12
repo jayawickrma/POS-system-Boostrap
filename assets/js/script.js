@@ -20,7 +20,7 @@ $('#nav-customer').on("click", () =>{
     $('#itemPage').css('display', 'none');
     $('#orderPage').css('display', 'none');
     $('#viewOrderDetailsPage').css('display', 'none');
-    console.log("AAA")
+
 });
 $('#nav-inventory').on("click", () =>{
     $('#itemPage').css('display', 'block');
@@ -29,16 +29,16 @@ $('#nav-inventory').on("click", () =>{
     $('#orderPage').css('display', 'none');
     $('#viewOrderDetailsPage').css('display', 'none');
 });
-$('#navbar-nav>a').eq(3).on("click", () =>{
-    event.preventDefault();
+$('#nav-order').eq(3).on("click", () =>{
+
     $('#orderPage').css('display', 'block');
     $('#itemPage').css('display', 'none');
     $('#customerPage').css('display', 'none');
     $('#homePage').css('display', 'none');
     $('#viewOrderDetailsPage').css('display', 'none');
 });
-$('#navbar-nav>a').eq(4).on("click", () =>{
-    event.preventDefault();
+$('#nav-orderDetail').eq(4).on("click", () =>{
+
     $('#viewOrderDetailsPage').css('display', 'block');
     $('#orderPage').css('display', 'none');
     $('#itemPage').css('display', 'none');
