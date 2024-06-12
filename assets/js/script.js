@@ -29,7 +29,7 @@ $('#nav-inventory').on("click", () =>{
     $('#orderPage').css('display', 'none');
     $('#viewOrderDetailsPage').css('display', 'none');
 });
-$('#nav-order').eq(3).on("click", () =>{
+$('#nav-order').on("click", () =>{
 
     $('#orderPage').css('display', 'block');
     $('#itemPage').css('display', 'none');
@@ -37,7 +37,7 @@ $('#nav-order').eq(3).on("click", () =>{
     $('#homePage').css('display', 'none');
     $('#viewOrderDetailsPage').css('display', 'none');
 });
-$('#nav-orderDetail').eq(4).on("click", () =>{
+$('#nav-orderDetail').on("click", () =>{
 
     $('#viewOrderDetailsPage').css('display', 'block');
     $('#orderPage').css('display', 'none');
